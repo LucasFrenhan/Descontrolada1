@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Adicionando produto</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Id</mat-label>
+        <input matInput [(ngModel)]="data.id">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="data.nome">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Preço de venda</mat-label>
+        <input matInput [(ngModel)]="data.preco">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Descrição</mat-label>
+        <input matInput [(ngModel)]="data.descricao">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Quantidade</mat-label>
+        <input matInput [(ngModel)]="data.quantidade">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Adicionar</button>
+</div>
