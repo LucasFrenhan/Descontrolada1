@@ -12,8 +12,8 @@ export interface ProdutoElement {
 }
 
 const ELEMENT_DATA: ProdutoElement[] = [
-  { id: 1, nome: 'Hydrogen', preco: 1.0079, descricao: 'H', quantidade: 10 },
-  { id: 2, nome: 'Helium', preco: 4.0026, descricao: 'He', quantidade: 15 },
+  { id: 1, nome: 'camiseta', preco: 1.0079, descricao: 'preta básica', quantidade: 10 },
+  { id: 2, nome: 'calça', preco: 4.0026, descricao: 'jeans', quantidade: 15 },
 ];
 
 @Component({

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aacRo+fIWnzLKLxlQ1yGIH71ajWB71LWTSFh9zt8Ji+fw6w5cZz/gjthE9bAYSbffTmFRTh+bUgdFBwtqRZkaw==",
+  "dgSpecHash": "YGRztf8lSfeP8E6IJAg6hU7k7USYoftPBDMW7RyxElSV/HPwlivqWEud5LvmaGy03RnmtXyaz1zmXHc5nUOXKw==",
   "success": true,
-  "projectFilePath": "C:\\curso\\TESTE\\Descontrolada\\Descontrolada.csproj",
+  "projectFilePath": "C:\\curso\\Descontrolada\\Descontrolada.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucas\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
