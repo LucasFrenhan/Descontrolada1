@@ -5,44 +5,43 @@ using Descontrolada.Repositorios.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace Descontrolada
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+namespace Descontrolada;
 
-            // Add services to the container.
+  public class Program
+  {
+      public static void Main(string[] args)
+      {
+          var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-            builder.Services.AddEntityFrameworkSqlServer()
-                .AddDbContext<DescontroladaDBContext>(
-                    options => options.UseSqlServer(builder.Configuration.GetConnectionString("Database"))
-                );
+          // Add services to the container.
 
-            builder.Services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
+          builder.Services.AddControllers();
+          // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+          builder.Services.AddEndpointsApiExplorer();
+          builder.Services.AddSwaggerGen();
+          builder.Services.AddEntityFrameworkSqlServer()
+              .AddDbContext<DescontroladaDBContext>(
+                  options => options.UseSqlServer(builder.Configuration.GetConnectionString("Database"))
+              );
 
-            var app = builder.Build();
+          builder.Services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+          var app = builder.Build();
 
-            app.UseHttpsRedirection();
+          // Configure the HTTP request pipeline.
+          if (app.Environment.IsDevelopment())
+          {
+              app.UseSwagger();
+              app.UseSwaggerUI();
+          }
 
-            app.UseAuthorization();
+          app.UseHttpsRedirection();
+
+          app.UseAuthorization();
 
 
-            app.MapControllers();
+          app.MapControllers();
 
-            app.Run();
-        }
-    }
-}
+          app.Run();
+      }
+  }
